@@ -1,6 +1,6 @@
 //Tela 2 - Choose
 import React, {useState} from 'react';
-import {View, Text, StyleSheet, Image, ScrollView, FlatList, TouchableOpacity} from 'react-native';
+import {View, Text, StyleSheet, Image, ScrollView, TouchableOpacity} from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
 export default function Perfil(){

@@ -188,6 +188,16 @@ export default function AuthProvider({ children }){
                 setUserc(data);
                 storageUserc(data);
                 setLoadingAuth(false);
+                Alert.alert(
+                    `Olá ${nome}, seja bem-vindo ao Makers!`,
+                    `Faça já seu pedido e aguarde que os profissionais entrarão em contato via WhatsApp.`,
+                    [
+                      {
+                        text: 'Next',
+                        onPress: () => nextc(),          
+                      }
+                    ]
+                    )
             })
         })
         .catch((error) =>{
@@ -204,6 +214,32 @@ export default function AuthProvider({ children }){
             setLoadingAuth(false);
         });
     }
+
+        function nextc(){
+            Alert.alert(
+                `Dica: mantenha SEMPRE seu número de telefone e seus dados atualizados!`,
+                `Os profissionais Makers entrarão em contato via WhatsApp, então antes de fazer um pedido confira se seus dados estão atualizados na aba "Perfil" ;)`,
+                [
+                    {
+                    text: 'Ok',
+                    style: 'cancel',          
+                    }
+                ]
+                )
+        }    
+
+        function nextm(){
+            Alert.alert(
+                `Dica: atualize suas fotos para se destacar!`,
+                `Mantenha as fotos de seus trabalhos atualizas, para chamar atenção dos compradores. Você pode atualizá-las na aba "Perfil"`,
+                [
+                  {
+                    text: 'Ok',
+                    style: 'cancel',          
+                  }
+                ]
+                )
+        }
 
         // Cadastro Maker
         async function signUpm(email, password, nome, cep, cidade, estado, bairro, telefone){
@@ -240,7 +276,16 @@ export default function AuthProvider({ children }){
                     console.log(userm);
                     storageUserm(data);
                     setLoadingAuth(false);
-                    
+                    Alert.alert(
+                        `Olá ${nome}, seja bem-vindo ao Makers!`,
+                        `As Stars são suas "moedas de troca" para abrir os pedidos. Você acaba de ganhar 30 delas por nossa conta ;) Desbloqueie algum pedido, e feche seu primeiro negócio!`,
+                        [
+                          {
+                            text: 'Ok',
+                            onPress: () => nextm(),          
+                          }
+                        ]
+                        )
                 })
             })
             .catch((error) =>{

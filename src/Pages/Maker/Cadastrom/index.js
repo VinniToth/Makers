@@ -42,7 +42,16 @@ export default function Cadastrom(){
       setErroestado(false);
       setErrobairro(false);
     }).catch(error => {
-      alert('CEP inválido, por favor corriga.')
+      Alert.alert(
+        'Ops, CEP inválido',
+        `Preencha corretamente o CEP para concluirmos seu cadastro.`,
+        [
+          {
+            text: 'Ok',
+            style: 'cancel',          
+          }
+        ]
+        )
       setErrocep(true);
       setErrocidade(true);
       setErroestado(true);
@@ -55,7 +64,16 @@ export default function Cadastrom(){
     signUpm(email, password, nome, cep, cidade, estado, bairro, telefone);
     }
     if(telefone.length !== 18 & telefone !== ''){
-      alert('Ops, número invalido... Verifique se o DDD ou número estão corretos! O número precisa estar relacionado á um WhatsApp')
+      Alert.alert(
+        'Ops, número telefonico invalido',
+        `Verifique se o DDD ou número estão corretos! O número precisa estar relacionado á um WhatsApp.`,
+        [
+          {
+            text: 'Ok',
+            style: 'cancel',          
+          }
+        ]
+        )
       setErrotelefone(true);
     }
     if(telefone.length == 18 & telefone !== ''){
@@ -122,7 +140,16 @@ export default function Cadastrom(){
     }
     if(password.length < 6 & password !== ''){
       setErropassword(true);
-      alert('Sua senha deve conter no mínimo 6 caracteres')
+      Alert.alert(
+        'Ops, senha inválida',
+        `Sua senha deve conter no mínimo 6 caracteres.`,
+        [
+          {
+            text: 'Ok',
+            style: 'cancel',          
+          }
+        ]
+        )
     }
     if(exibir == false){
       setExibir(true);
@@ -150,7 +177,7 @@ export default function Cadastrom(){
         {/* TELA COMEÇO */}  
         <View style={styles.tela}> 
         
-          <Image source={require('../../../Images/fundo.png')} style={{position: 'absolute'}} />
+          <Image source={require('../../../Images/fundo-padrao.png')} style={{position: 'absolute'}} />
 
 
           <View style={styles.vcadastro}>
@@ -442,8 +469,9 @@ const styles = StyleSheet.create({
   },
   titulo:{
     fontSize: 30,
-    fontFamily: "Roboto-Tiny",
+    fontFamily: "Roboto-Light",
     textAlign: 'center',
+    marginBottom: 30
   },
   vcadastro:{
     justifyContent: 'center',
