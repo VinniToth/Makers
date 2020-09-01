@@ -231,7 +231,7 @@ export default function AuthProvider({ children }){
         function nextm(){
             Alert.alert(
                 `Dica: atualize suas fotos para se destacar!`,
-                `Mantenha as fotos de seus trabalhos atualizas, para chamar atenção dos compradores. Você pode atualizá-las na aba "Perfil"`,
+                `Mantenha as fotos de seus trabalhos atualizadas, para chamar atenção dos compradores. Você pode atualizá-las na aba "Perfil"`,
                 [
                   {
                     text: 'Ok',
@@ -281,7 +281,7 @@ export default function AuthProvider({ children }){
                         `As Stars são suas "moedas de troca" para abrir os pedidos. Você acaba de ganhar 30 delas por nossa conta ;) Desbloqueie algum pedido, e feche seu primeiro negócio!`,
                         [
                           {
-                            text: 'Ok',
+                            text: 'Next',
                             onPress: () => nextm(),          
                           }
                         ]

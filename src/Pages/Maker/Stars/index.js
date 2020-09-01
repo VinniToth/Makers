@@ -94,7 +94,7 @@ export default function Stars(){
       (setshowModal4(false));
       Alert.alert(
         `Parabéns, você acaba de adquirir o Pacote Premium!`,
-        `Seu saldo atual é de: ${stars}! Começe a utilizar agora. Boa sorte :)`,
+        `Começe a utilizar agora. Boa sorte :)`,
         [
           {
             text: 'Ok',

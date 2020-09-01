@@ -468,7 +468,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   titulo:{
-    fontSize: 30,
+    fontSize: 35,
     fontFamily: "Roboto-Light",
     textAlign: 'center',
     marginBottom: 30
