@@ -21,7 +21,16 @@ export default function Stars(){
     if(data.title === 'Aprovado'){
       creditar1();
       (setshowModal1(false));
-      alert("Parabéns, você acaba de adquirir o Pacote Inicial.");
+      Alert.alert(
+        `Parabéns, você acaba de adquirir o Pacote Inicial!`,
+        `Seu saldo atual é de: ${stars}! Começe a utilizar agora. Boa sorte :)`,
+        [
+          {
+            text: 'Ok',
+            style: 'cancel',          
+          }
+        ]
+        );
       dado();
     }
     };
@@ -36,7 +45,16 @@ export default function Stars(){
     if(data.title === 'Aprovado'){
       creditar2();
       (setshowModal2(false));
-      alert("Parabéns, você acaba de adquirir o Pacote Médio.");
+      Alert.alert(
+        `Parabéns, você acaba de adquirir o Pacote Médio!`,
+        `Seu saldo atual é de: ${stars}! Começe a utilizar agora. Boa sorte :)`,
+        [
+          {
+            text: 'Ok',
+            style: 'cancel',          
+          }
+        ]
+        );
       dado();
     }
     };
@@ -51,8 +69,16 @@ export default function Stars(){
     if(data.title === 'Aprovado'){
       creditar3();
       (setshowModal3(false));
-      alert("Parabéns, você acaba de adquirir o Pacote Plus.");
-      dado();
+      Alert.alert(
+        `Parabéns, você acaba de adquirir o Pacote Plus!`,
+        `Seu saldo atual é de: ${stars}! Começe a utilizar agora. Boa sorte :)`,
+        [
+          {
+            text: 'Ok',
+            style: 'cancel',          
+          }
+        ]
+        );
     }
     };
   
@@ -66,7 +92,16 @@ export default function Stars(){
     if(data.title === 'Aprovado'){
       creditar4();
       (setshowModal4(false));
-      alert("Parabéns, você acaba de adquirir o Pacote Premium.");
+      Alert.alert(
+        `Parabéns, você acaba de adquirir o Pacote Premium!`,
+        `Seu saldo atual é de: ${stars}! Começe a utilizar agora. Boa sorte :)`,
+        [
+          {
+            text: 'Ok',
+            style: 'cancel',          
+          }
+        ]
+        );
       dado();
     }
     };

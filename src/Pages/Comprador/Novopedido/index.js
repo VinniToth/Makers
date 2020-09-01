@@ -91,8 +91,16 @@ export default function Novopedido(){
 
         stor();        
 
-
-        alert('Pedido efetuado!');
+        Alert.alert(
+          `Pedido efetuado com sucesso!`,
+          `Em breve os Makers entrarão em contato via WhatsApp: ${telefone}. Você pode acompanhar quem abriu seu pedido, na aba "Pedidos"`,
+          [
+            {
+              text: 'Ok',
+              style: 'cancel',          
+            }
+          ]
+          )
         setErroa(false);
         setErrot(false);
         setErrod(false);
@@ -107,7 +115,16 @@ export default function Novopedido(){
         
     };
     if(desc == '' || title == '' || avatar == null || periodo == '' || categoria == '' ){
-      alert('Ops, faltou preencher algum campo.');
+      Alert.alert(
+        `Ops, faltou preencher algum campo`,
+        `Preencha todos os campos para concluir seu pedido :)`,
+        [
+          {
+            text: 'Ok',
+            style: 'cancel',          
+          }
+        ]
+        );
     }
     if(desc == ''){
       setErrod(true);

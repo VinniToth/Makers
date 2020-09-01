@@ -34,7 +34,18 @@ export default function Atualizarperfilc(){
       setCidadea(data.localidade);
       setEstadoa(data.uf);
       setBairroa(data.bairro);
-    })
+    }).catch(error => {
+      Alert.alert(
+        'Ops, CEP inválido',
+        `Preencha corretamente o CEP para atualizar.`,
+        [
+          {
+            text: 'Ok',
+            style: 'cancel',          
+          }
+        ]
+        )
+    });
   }
 
   function mascara(){ 
@@ -75,7 +86,7 @@ export default function Atualizarperfilc(){
       })
       setModal(false);
     };
-    if(cepa !== ''){
+    if(cepa !== '' & cidadea !== null){
       await firebase.database().ref('comprador').child(uid).update({
         cep: cepa,
         cidade: cidadea,
@@ -84,6 +95,18 @@ export default function Atualizarperfilc(){
       })
       setModal(false);
     };
+    if(cepa !== '' & cidadea == null){
+      Alert.alert(
+        `Aperte no campo "Atualizar Cidade"`,
+        `Preencha seu CEP novamente, e aperte em "Atualizar Cidade" para validarmos seu cep, por favor.`,
+        [
+          {
+            text: 'Ok',
+            style: 'cancel'
+          }
+        ]
+        )
+    };
     if(telefonea !== '' & telefonea.length == 18){
       await firebase.database().ref('comprador').child(uid).update({
         telefone: telefonea
@@ -91,10 +114,28 @@ export default function Atualizarperfilc(){
       setModal(false);
     };
     if(telefonea == '' & cepa == '' & nomea == ''){
-      alert('Preencha algum campo para atualizar!')
+      Alert.alert(
+        `Preencha algum campo para atualizar!`,
+        `Você pode atualizar um, ou mais informações por vez.`,
+        [
+          {
+            text: 'Ok',
+            style: 'cancel'
+          }
+        ]
+        )
     };
     if(telefonea.length !== 18 & telefonea !== ''){
-      alert('Ops, numero invalido... Verifique se o DDD ou numero estão corretos')
+      Alert.alert(
+        `Ops, telefone inválido...`,
+        `Verifique se o DDD ou número estão corretos.`,
+        [
+          {
+            text: 'Ok',
+            style: 'cancel'
+          }
+        ]
+        )
     };
     setNomea('');
     setCepa('');
@@ -228,7 +269,18 @@ export default function Atualizarperfilc(){
 
             <View style={styles.vaplicar}>
               <TouchableOpacity 
-              onPress={() => { stor(); alert('Imagem salva com sucesso!') }}
+              onPress={() => { stor(); 
+                Alert.alert(
+                  `Imagem salva com sucesso!`,
+                  `Sua foto de perfil foi atualizada :)`,
+                  [
+                    {
+                      text: 'Ok',
+                      style: 'cancel'
+                    }
+                  ]
+                  ) 
+              }}
               style={styles.btnaplicar}>
 
               <Text style={{color: 'white', fontSize: 18, fontFamily: "Roboto-Light"}}>Salvar Imagem</Text>

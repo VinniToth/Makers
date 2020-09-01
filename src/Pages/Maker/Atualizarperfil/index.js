@@ -42,7 +42,18 @@ export default function Atualizarperfil(){
       setCidadea(data.localidade);
       setEstadoa(data.uf);
       setBairroa(data.bairro);
-    })
+    }).catch(error => {
+      Alert.alert(
+        'Ops, CEP inválido',
+        `Preencha corretamente o CEP para atualizar.`,
+        [
+          {
+            text: 'Ok',
+            style: 'cancel',          
+          }
+        ]
+        )
+    });
   }
 
   useEffect(() => {
@@ -86,7 +97,7 @@ export default function Atualizarperfil(){
       })
       setModal(false);
     };
-    if(cepa !== ''){
+    if(cepa !== '' & cidadea !== null){
       await firebase.database().ref('maker').child(uid).update({
         cep: cepa,
         cidade: cidadea,
@@ -95,6 +106,18 @@ export default function Atualizarperfil(){
       })
       setModal(false);
     };
+    if(cepa !== '' & cidadea == null){
+      Alert.alert(
+        `Aperte no campo "Atualizar Cidade"`,
+        `Preencha seu CEP novamente, e aperte em "Atualizar Cidade" para validarmos seu cep, por favor.`,
+        [
+          {
+            text: 'Ok',
+            style: 'cancel'
+          }
+        ]
+        )
+    };
     if(telefonea !== '' & telefonea.length == 18){
       await firebase.database().ref('maker').child(uid).update({
         telefone: telefonea
@@ -102,10 +125,28 @@ export default function Atualizarperfil(){
       setModal(false);
     };
     if(telefonea == '' & cepa == '' & nomea == ''){
-      alert('Preencha algum campo para atualizar!')
+      Alert.alert(
+        `Preencha algum campo para atualizar!`,
+        `Você pode atualizar um, ou mais informações por vez.`,
+        [
+          {
+            text: 'Ok',
+            style: 'cancel'
+          }
+        ]
+        )
     };
     if(telefonea.length !== 18 & telefonea !== ''){
-      alert('Ops, numero invalido... Verifique se o DDD ou numero estão corretos')
+      Alert.alert(
+        `Ops, telefone inválido...`,
+        `Verifique se o DDD ou número estão corretos.`,
+        [
+          {
+            text: 'Ok',
+            style: 'cancel'
+          }
+        ]
+        )
     };
     setNomea('');
     setCepa('');
@@ -459,7 +500,18 @@ export default function Atualizarperfil(){
 
           <View style={styles.vaplicar}>
             <TouchableOpacity 
-            onPress={() => { stor(); stor1(); stor2(); stor3(); alert('Imagens salvas com sucesso!') }}
+            onPress={() => { stor(); stor1(); stor2(); stor3(); 
+              Alert.alert(
+                `Imagens salvas com sucesso!`,
+                `Suas fotos estão atualizadas :)`,
+                [
+                  {
+                    text: 'Ok',
+                    style: 'cancel'
+                  }
+                ]
+                )
+            }}
             style={styles.btnaplicar}>
 
             <Text style={{color: 'white', fontSize: 18, fontFamily: "Roboto-Light"}}>Aplicar Alterações</Text>
@@ -489,6 +541,7 @@ export default function Atualizarperfil(){
       <Modal animationType="slide" visible={modal}>
 
         <View style={styles.vcadastro}>
+        <Text style={{fontSize: 20, fontFamily: 'Roboto-Light', textAlign: 'center'}}>Você pode atualizar 1 ou mais informações :)</Text>      
          
           <TextInput 
           placeholder={'Atualizar Nome'}
@@ -730,24 +783,31 @@ const styles = StyleSheet.create({
       flexDirection: 'row',
       alignItems: 'center',
       justifyContent: 'space-around',
-      marginTop: 30,
-      
+      marginTop: 20,        
     },
     btn:{
-      backgroundColor: 'black',
-        padding: 5,
-        borderRadius: 12,
-        borderWidth: 4,
-        width: 150,
-        marginVertical: 20,
-        justifyContent: 'center',
-        alignItems: 'center',
-        elevation: 8,
+      shadowColor: '#000',
+      shadowOffset: {width: 0, height: 1},
+      shadowOpacity: 0.8,
+      shadowRadius: 5,
+      borderRadius: 12,
+      padding: 10,
+      alignItems: 'center',
+      backgroundColor: '#8c52ff',
+      marginTop: 15,
+      flexDirection: 'row',
+      justifyContent: 'center',
+      backgroundColor: '#8c52ff',
+      width: 150,
+      marginVertical: 10,
+      justifyContent: 'center',
+      alignItems: 'center',
+      elevation: 8,
     },
     txtbtn:{
       color: 'white',
-      fontSize: 20,
-      fontWeight: 'bold'
+      fontSize: 18, 
+      fontFamily: "Roboto-Light"
     },
     images:{
       width: '100%',
