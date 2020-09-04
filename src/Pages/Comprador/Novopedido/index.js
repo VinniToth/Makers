@@ -13,7 +13,7 @@ import { Context } from '../../Maker/Pedidos/Contextpedido';
 console.disableYellowBox = true;
 export default function Novopedido(){
 
-    const { userc } = useContext(AuthContext);
+  const { userc } = useContext(AuthContext);
     const { dadoc, nome, estado, cep, cidade, bairro, email, telefone, picture } = useContext(Context);
 
     const [desc, setDesc] = useState('');
@@ -115,6 +115,7 @@ export default function Novopedido(){
         
     };
     if(desc == '' || title == '' || avatar == null || periodo == '' || categoria == '' ){
+      console.log(categoria, periodo);
       Alert.alert(
         `Ops, faltou preencher algum campo`,
         `Preencha todos os campos para concluir seu pedido :)`,

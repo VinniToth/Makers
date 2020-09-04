@@ -514,7 +514,7 @@ export default function Atualizarperfil(){
             }}
             style={styles.btnaplicar}>
 
-            <Text style={{color: 'white', fontSize: 18, fontFamily: "Roboto-Light"}}>Aplicar Alterações</Text>
+            <Text style={{color: 'white', fontSize: 18, fontFamily: "Roboto-Light"}}>Salvar Imagens</Text>
             <Icon name="save-outline" size={20} color='white' style={{marginHorizontal: 10}} />   
             
             </TouchableOpacity>
