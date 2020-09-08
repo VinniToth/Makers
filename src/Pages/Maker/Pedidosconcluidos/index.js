@@ -45,13 +45,8 @@ export default function Pedidosconcluidos(){
           let maker1 = childItem.val().maker1;
           let maker2 = childItem.val().maker2;
           let maker3 = childItem.val().maker3;
-          
-          if(maker1 == userm.uid || maker2== userm.uid || maker3== userm.uid)
-          {
+
             setPedidos(oldArray => [...oldArray, data].reverse());
-            setTriste(false);
-          }
-          else(setTriste(true))
 
         })
         setLoading(false);
@@ -72,7 +67,7 @@ export default function Pedidosconcluidos(){
         <View style={styles.tela}> 
         
           {/* HEADER COMEÇO */}
-          <View style={styles.vheader}>
+          <View style={{alignItems: 'center', position: 'absolute'}}>
                 <Image 
                     source={require('../../../Images/fundo.png')}
                     style={styles.header}
@@ -91,15 +86,7 @@ export default function Pedidosconcluidos(){
           </View>
           {/* TITULO FIM */}
 
-          {triste ?
-          (<View style={{alignItems: 'center', marginTop: 30}}>
-          <Image source={require('../../../Images/estrela-triste.png')} style={{marginVertical: 25}} />
-          <Text style={{textAlign: 'center', marginHorizontal: 20, fontSize: 17, marginBottom: 10, fontFamily: "Roboto-Tiny",}}>Você ainda não desbloqueou nenhum pedido :´(</Text>
-          <Text style={{textAlign: 'center', marginHorizontal: 20, fontSize: 20, fontFamily: "Roboto-Medium",}}>Passe para o lado e desbloqueie já!</Text>
-          <Icon name="arrow-undo-sharp" size={45} color='black'/>
-          </View>)
-          :
-          (
+         
             <View style={styles.vpedido}>
   
               {loading ?
@@ -114,13 +101,7 @@ export default function Pedidosconcluidos(){
               />
               )
               }
-            </View>
-            )
-          }
-          
-
-          
-
+            </View>     
 
         </View>
         {/* TELA FIM */} 

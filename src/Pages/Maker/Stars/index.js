@@ -137,7 +137,7 @@ export default function Stars(){
         {/* TELA COMEÇO */}  
         <View style={styles.tela}> 
         
-            <View style={styles.vheader}>
+            <View style={{alignItems: 'center', position: 'absolute'}}>
                 <Image 
                     source={require('../../../Images/fundo.png')}
                     style={styles.header}

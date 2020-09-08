@@ -82,13 +82,12 @@ export default function Pedido({ children }){
         <View style={styles.tela}> 
         
           {/* HEADER COMEÇO */}
-          <View style={styles.vheader}>
+          <View style={{alignItems: 'center', position: 'absolute'}}>
                 <Image 
                     source={require('../../../Images/fundo.png')}
                     style={styles.header}
                 />
                 <Iconm name="star" size={125} color='#FFB600' style={{position: 'absolute', marginTop: 0, alignItems: 'center'}} /> 
-
             </View>
                 <Text style={styles.stars}>{stars}</Text>
           {/* HEADER FIM */}

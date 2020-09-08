@@ -27,7 +27,7 @@ export default function Perfil(){
       <View style={styles.tela}> 
 
             <Image 
-                source={require('../../Images/choose.png')}
+                source={require('../../Images/fundo.png')}
                 style={{position: 'absolute'}}
                 />
         <View style={{alignItems: 'center'}}>
@@ -37,6 +37,18 @@ export default function Perfil(){
         <Text style={styles.textoprincipal}>
           Para começar seu cadastro, precisamos saber qual o seu perfíl...
         </Text>
+
+        <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
+          <Image 
+          source={require('../../Images/2.png')}
+          style={{marginHorizontal: 20}}
+          />
+
+          <Image 
+          source={require('../../Images/1.png')}
+          style={{marginHorizontal: 20}}
+          />
+        </View>
 
         <View style={styles.vbtn}>
 
@@ -103,7 +115,7 @@ const styles = StyleSheet.create({
       flexDirection: 'row',
       height: 40,
       marginVertical: 50,
-      marginTop: 290
+      marginTop: 0
     },
     btn:{
       flex:1,
