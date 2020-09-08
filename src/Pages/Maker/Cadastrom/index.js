@@ -1,6 +1,7 @@
 import React, {useState, useEffect, useContext} from 'react';
 import {Keyboard, ActivityIndicator, View, Text, StyleSheet, Image, TouchableOpacity, TextInput, ScrollView, Alert, KeyboardAvoidingView} from 'react-native';
 import { useNavigation } from '@react-navigation/native';
+import Iconm from 'react-native-vector-icons/MaterialIcons';
 
 import {AuthContext} from '../../../contexts/auth';
 
@@ -177,7 +178,11 @@ export default function Cadastrom(){
         {/* TELA COMEÇO */}  
         <View style={styles.tela}> 
         
-          <Image source={require('../../../Images/fundo-padrao.png')} style={{position: 'absolute'}} />
+          <Image source={require('../../../Images/fundo.png')} style={{position: 'absolute'}} />
+
+          <View style={{alignItems: 'center'}}>
+              <Iconm name="star" size={125} color='#FFB600' style={{position: 'absolute', marginTop: 0}} /> 
+          </View>
 
 
           <View style={styles.vcadastro}>

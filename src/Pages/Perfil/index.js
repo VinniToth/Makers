@@ -1,6 +1,7 @@
 //Tela 2 - Choose
 import React, {useState} from 'react';
 import {View, Text, StyleSheet, Image, ScrollView, TouchableOpacity} from 'react-native';
+import Iconm from 'react-native-vector-icons/MaterialIcons';
 import { useNavigation } from '@react-navigation/native';
 
 export default function Perfil(){
@@ -29,6 +30,9 @@ export default function Perfil(){
                 source={require('../../Images/fundo.png')}
                 style={{position: 'absolute'}}
                 />
+        <View style={{alignItems: 'center'}}>
+        <Iconm name="star" size={125} color='#FFB600' style={{position: 'absolute', marginTop: 0}} /> 
+        </View>
 
         <Text style={styles.textoprincipal}>
           Para começar seu cadastro, precisamos saber qual o seu perfíl...

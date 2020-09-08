@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import {View, Text, StyleSheet, Image, TouchableOpacity, TextInput, ScrollView, Alert} from 'react-native';
 import { useNavigation } from '@react-navigation/native';
+import Iconm from 'react-native-vector-icons/MaterialIcons';
 
 export default function ChooseLog(){
 
@@ -25,6 +26,10 @@ export default function ChooseLog(){
                     source={require('../../Images/fundo.png')}
                     style={{position: 'absolute'}}
                 />
+
+                <View style={{alignItems: 'center'}}>
+                    <Iconm name="star" size={125} color='#FFB600' style={{position: 'absolute', marginTop: 0}} /> 
+                </View>
             
             <View style={{justifyContent: 'center', alignItems: 'center', flex: 1, marginTop: 150}}>
                 <Text style={styles.titulo}>Entrar como</Text>

@@ -353,7 +353,7 @@ export default function Atualizarperfil(){
 
       <View style={styles.tela}> 
             <Image 
-                source={require('../../../Images/fundo-padrao.png')}
+                source={require('../../../Images/fundo.png')}
                 style={styles.header}
             />
 

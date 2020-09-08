@@ -2,6 +2,7 @@ import React, {useState, useContext} from 'react';
 import {View, Text, StyleSheet, Image, TextInput, 
         TouchableOpacity, KeyboardAvoidingView, ActivityIndicator} from 'react-native';
 import { useNavigation } from '@react-navigation/native';
+import Iconm from 'react-native-vector-icons/MaterialIcons';
 
 import {AuthContext} from '../../contexts/auth';
 
@@ -35,6 +36,10 @@ export default function Login() {
                   source={require('../../Images/fundo.png')}
                   style={{position: 'absolute'}}
                   />
+
+                  <View style={{alignItems: 'center'}}>
+                      <Iconm name="star" size={125} color='#FFB600' style={{position: 'absolute', marginTop: 0}} /> 
+                  </View>
 
 
 

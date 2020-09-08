@@ -77,8 +77,9 @@ export default function Pedidosconcluidos(){
                     source={require('../../../Images/fundo.png')}
                     style={styles.header}
                 />
-                <Text style={styles.stars}>{ stars }</Text>
+                <Iconm name="star" size={125} color='#FFB600' style={{position: 'absolute', marginTop: 0, alignItems: 'center'}} /> 
             </View>
+                <Text style={styles.stars}>{ stars }</Text>
           {/* HEADER FIM */}
         
 
@@ -140,14 +141,15 @@ const styles = StyleSheet.create({
     tela:{
       flex: 1,
     },
-    header:{
-      position: 'absolute'
+    vheader:{
+      position: 'absolute',
+      alignItems: 'center',
     },
     stars:{
       fontSize: 25,
       textAlign: 'center',
       marginTop: 48,
-      fontFamily: "Roboto-Medium", 
+      fontFamily: "Roboto-Tiny", 
     },
     vtitulo:{
       alignItems: 'center',

@@ -2,6 +2,7 @@ import React, {useState, useContext, useEffect} from 'react';
 import {StatusBar, KeyboardAvoidingView, View, Text, StyleSheet, Image, TouchableOpacity, TextInput, ScrollView, Alert, Keyboard, TouchableWithoutFeedback} from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import firebase from '../../../firebaseConnection';
+import Iconm from 'react-native-vector-icons/MaterialIcons';
 
 import ImagePicker from 'react-native-image-picker';
 
@@ -170,6 +171,9 @@ export default function Novopedido(){
                         source={require('../../../Images/fundo.png')}
                         style={{position: 'absolute'}}                        
                         />
+                    <View style={{alignItems: 'center'}}>
+                        <Iconm name="star" size={125} color='#FFB600' style={{position: 'absolute', marginTop: 0}} /> 
+                    </View>
 
                 {/* TITULO COMEÇO */}
                 <View style={styles.vtitulo}>
@@ -368,14 +372,9 @@ const styles = StyleSheet.create({
       titleinput:{
         fontFamily: "Roboto-Light", 
         fontSize: 17,
-        borderRadius: 5,
         padding: 7,
         elevation: 2,
-        shadowColor: '#000',
-        shadowOffset: {width: 0, height: 1},
-        shadowOpacity: 0.8,
-        shadowRadius: 5,
-        borderRadius: 5,
+        borderRadius: 2,
         height: 50,
         backgroundColor: 'white',
         borderWidth: 0.2
@@ -383,32 +382,22 @@ const styles = StyleSheet.create({
       titleinputerro:{
         fontFamily: "Roboto-Light", 
         fontSize: 17,
-        borderRadius: 5,
         padding: 7,
         elevation: 2,
-        shadowColor: '#000',
-        shadowOffset: {width: 0, height: 1},
-        shadowOpacity: 0.8,
-        shadowRadius: 5,
-        borderRadius: 5,
+        borderRadius: 2,
         height: 50,
+        backgroundColor: 'white',
         borderWidth: 0.8,
         borderColor: 'red',
-        backgroundColor: 'white',
       },
       inpt:{
         fontSize: 17,
         height: 150,
         textAlignVertical: 'top',
         marginBottom: 20,
-        borderRadius: 5,
+        borderRadius: 2,
         padding: 7,
         elevation: 2,
-        shadowColor: '#000',
-        shadowOffset: {width: 0, height: 1},
-        shadowOpacity: 0.8,
-        shadowRadius: 5,
-        borderRadius: 5,
         fontFamily: "Roboto-Light", 
         backgroundColor: 'white',
         borderWidth: 0.2
@@ -419,14 +408,9 @@ const styles = StyleSheet.create({
         height: 150,
         textAlignVertical: 'top',
         marginBottom: 20,
-        borderRadius: 5,
+        borderRadius: 2,
         padding: 7,
         elevation: 2,
-        shadowColor: '#000',
-        shadowOffset: {width: 0, height: 1},
-        shadowOpacity: 0.8,
-        shadowRadius: 5,
-        borderRadius: 5,
         borderColor: 'red',
         borderWidth: 0.8,
         backgroundColor: 'white'

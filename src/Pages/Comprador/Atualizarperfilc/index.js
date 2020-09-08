@@ -210,7 +210,7 @@ export default function Atualizarperfilc(){
       <ScrollView showsVerticalScrollIndicator={false}>
             
             <Image 
-                source={require('../../../Images/fundo-padrao.png')}
+                source={require('../../../Images/fundo.png')}
                 style={styles.header}
             />
 

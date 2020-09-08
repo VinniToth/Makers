@@ -91,6 +91,9 @@ export default function Pedido(){
                     source={require('../../../Images/fundo.png')}
                     style={{position: 'absolute'}}
                 />
+                <View style={{alignItems: 'center'}}>
+                  <Iconm name="star" size={125} color='#FFB600' style={{position: 'absolute', marginTop: 0}} /> 
+                </View>
         
 
           {/* TITULO COMEÇO */}

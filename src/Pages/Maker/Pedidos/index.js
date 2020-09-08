@@ -1,5 +1,6 @@
 import React, {useState, useEffect, useContext} from 'react';
 import {StatusBar, View, Text, StyleSheet, Image, TouchableOpacity, ScrollView, TextInput, FlatList, Alert, ActivityIndicator} from 'react-native';
+import Iconm from 'react-native-vector-icons/MaterialIcons';
 import firebase from '../../../firebaseConnection';
 
 import Listapedido from '../Listapedido';
@@ -86,8 +87,10 @@ export default function Pedido({ children }){
                     source={require('../../../Images/fundo.png')}
                     style={styles.header}
                 />
-                <Text style={styles.stars}>{stars}</Text>
+                <Iconm name="star" size={125} color='#FFB600' style={{position: 'absolute', marginTop: 0, alignItems: 'center'}} /> 
+
             </View>
+                <Text style={styles.stars}>{stars}</Text>
           {/* HEADER FIM */}
         
 
@@ -141,14 +144,15 @@ const styles = StyleSheet.create({
       flex: 1,
       backgroundColor: 'white'
     },
-    header:{
-      position: 'absolute'
+    vheader:{
+      position: 'absolute',
+      alignItems: 'center',
     },
     stars:{
       fontSize: 25,
       textAlign: 'center',
       marginTop: 48,
-      fontFamily: "Roboto-Medium", 
+      fontFamily: "Roboto-Tiny", 
     },
     vtitulo:{
       alignItems: 'center',

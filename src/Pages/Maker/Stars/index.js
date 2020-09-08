@@ -1,6 +1,7 @@
 import React, {useState, useEffect, useContext} from 'react';
 import {Modal, Linking, View, Text, StyleSheet, Image, TouchableOpacity, TextInput, ScrollView, Alert} from 'react-native';
 import firebase from '../../../firebaseConnection';
+import Iconm from 'react-native-vector-icons/MaterialIcons';
 import WebView from 'react-native-webview';
 
 import { Context } from '../Pedidos/Contextpedido';
@@ -136,10 +137,13 @@ export default function Stars(){
         {/* TELA COMEÇO */}  
         <View style={styles.tela}> 
         
+            <View style={styles.vheader}>
                 <Image 
                     source={require('../../../Images/fundo.png')}
                     style={styles.header}
                 />
+                <Iconm name="star" size={125} color='#FFB600' style={{position: 'absolute', marginTop: 0, alignItems: 'center'}} /> 
+            </View>
                 <Text style={styles.stars}>{stars}</Text>
 
             <View style={styles.vtitulo}>
@@ -255,14 +259,15 @@ const styles = StyleSheet.create({
       backgroundColor: 'white',    
       flex: 1,
     },
-    header:{
-      position: 'absolute'
+    vheader:{
+      position: 'absolute',
+      alignItems: 'center',
     },
     stars:{
       fontSize: 25,
       textAlign: 'center',
       marginTop: 48,
-      fontFamily: "Roboto-Medium", 
+      fontFamily: "Roboto-Tiny", 
     },
     vtitulo:{
       alignItems: 'center',
