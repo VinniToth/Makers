@@ -75,7 +75,7 @@ const styles = StyleSheet.create({
         fontSize: 27,
         textAlign: 'center',
         marginTop: 40,
-        fontFamily: "Roboto-Tiny",
+        fontFamily: "Roboto-Light",
     },
     vbtn:{
         flex: 1,

@@ -157,7 +157,7 @@ const styles = StyleSheet.create({
     titulo:{
       fontSize: 24,
       textAlign: 'center',
-      fontFamily: "Roboto-Tiny",
+      fontFamily: "Roboto-Light",
       marginTop: 50
     },
     vpedido:{

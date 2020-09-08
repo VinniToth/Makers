@@ -159,7 +159,7 @@ const styles = StyleSheet.create({
     },
     titulo:{
       fontSize: 30,
-      fontFamily: "Roboto-Tiny",
+      fontFamily: "Roboto-Light",
       marginTop: 150,
       marginBottom: 20
     }

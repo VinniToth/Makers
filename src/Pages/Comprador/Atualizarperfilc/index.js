@@ -413,7 +413,7 @@ const styles = StyleSheet.create({
       },
       titulo:{
         fontSize: 24,
-        fontFamily: "Roboto-Medium", 
+        fontFamily: "Roboto-Tiny", 
         textAlign: 'center'
       },
       vfoto:{
