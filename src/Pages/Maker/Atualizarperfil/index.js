@@ -127,7 +127,7 @@ export default function Atualizarperfil(){
     if(telefonea == '' & cepa == '' & nomea == ''){
       Alert.alert(
         `Preencha algum campo para atualizar!`,
-        `Você pode atualizar um, ou mais informações por vez.`,
+        `Você pode atualizar uma, ou mais informações por vez.`,
         [
           {
             text: 'Ok',
@@ -540,6 +540,11 @@ export default function Atualizarperfil(){
       {/* TELA FIM */} 
       <Modal animationType="slide" visible={modal}>
 
+      <Image 
+                source={require('../../../Images/fundo.png')}
+                style={styles.header}
+            />
+
         <View style={styles.vcadastro}>
         <Text style={{fontSize: 20, fontFamily: 'Roboto-Light', textAlign: 'center'}}>Você pode atualizar 1 ou mais informações :)</Text>      
          
@@ -777,7 +782,8 @@ const styles = StyleSheet.create({
       borderRadius: 5,
       padding: 10,
       marginTop: 20,
-      elevation: 2
+      elevation: 2,
+      fontFamily: "Roboto-Light"
     },
     vbtn:{
       flexDirection: 'row',

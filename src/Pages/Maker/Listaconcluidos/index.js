@@ -56,7 +56,7 @@ export default function Listapedido({ data }){
             <Text style={styles.pedido}> {data.periodo} </Text>
             <View style={{
             backgroundColor: '#8c52ff', flex:1, marginHorizontal: 20, 
-            margin: 5, alignItems: 'center', borderWidth: 1, borderRadius: 5}}>
+            margin: 5, alignItems: 'center', borderWidth: 1, borderRadius: 5, width: '90%'}}>
             <Text style={{fontFamily: "Roboto-Tiny", color: 'white', fontSize: 15}}>
               Você, e mais {parseInt(data.flag) - (1)} makers abriram esse pedido!</Text>
           </View>
