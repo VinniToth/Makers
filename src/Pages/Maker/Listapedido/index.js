@@ -179,7 +179,7 @@ export default function Listapedido({ data }){
           animationType="slide" visible={modal}
           >
               <Image 
-            source={require('../../../Images/fundo-padrao.png')}
+            source={require('../../../Images/fundo.png')}
             style={styles.header}
             />            
             <View style={styles.vmodal}>

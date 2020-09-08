@@ -202,7 +202,7 @@ export default function Lista({ data }){
           >
 
               <Image 
-                source={require('../../../Images/fundo-padrao.png')}
+                source={require('../../../Images/fundo.png')}
                 style={styles.header}
               />
 
