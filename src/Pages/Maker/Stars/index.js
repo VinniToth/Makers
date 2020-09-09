@@ -24,7 +24,7 @@ export default function Stars(){
       (setshowModal1(false));
       Alert.alert(
         `Parabéns, você acaba de adquirir o Pacote Inicial!`,
-        `Seu saldo atual é de: ${stars}! Começe a utilizar agora. Boa sorte :)`,
+        `Seu saldo atual é de: ${(parseInt(stars)+45)}! Começe a utilizar agora. Boa sorte :)`,
         [
           {
             text: 'Ok',
@@ -48,7 +48,7 @@ export default function Stars(){
       (setshowModal2(false));
       Alert.alert(
         `Parabéns, você acaba de adquirir o Pacote Médio!`,
-        `Seu saldo atual é de: ${stars}! Começe a utilizar agora. Boa sorte :)`,
+        `Seu saldo atual é de: ${(parseInt(stars)+105)}! Começe a utilizar agora. Boa sorte :)`,
         [
           {
             text: 'Ok',
@@ -72,7 +72,7 @@ export default function Stars(){
       (setshowModal3(false));
       Alert.alert(
         `Parabéns, você acaba de adquirir o Pacote Plus!`,
-        `Seu saldo atual é de: ${stars}! Começe a utilizar agora. Boa sorte :)`,
+        `Seu saldo atual é de: ${(parseInt(stars)+220)}! Começe a utilizar agora. Boa sorte :)`,
         [
           {
             text: 'Ok',
@@ -95,7 +95,7 @@ export default function Stars(){
       (setshowModal4(false));
       Alert.alert(
         `Parabéns, você acaba de adquirir o Pacote Premium!`,
-        `Começe a utilizar agora. Boa sorte :)`,
+        `Seu saldo atual é de: ${(parseInt(stars)+450)}! Começe a utilizar agora. Boa sorte :)`,
         [
           {
             text: 'Ok',

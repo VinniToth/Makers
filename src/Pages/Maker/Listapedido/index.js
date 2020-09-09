@@ -34,7 +34,7 @@ export default function Listapedido({ data }){
 
   async function Confirm(){
     Alert.alert(
-      'Deseja confirmar o desbloqueio? O custo será de 10 Stars!',
+      'Deseja confirmar o desbloqueio? Custo: 10 Stars',
       `Pedido:  ${data.titulo}`,
       [
         {
