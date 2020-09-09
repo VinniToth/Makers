@@ -21,7 +21,7 @@ export default function Home() {
           <View style={styles.tela}> 
         
             <Image
-                  source={require('../../Images/Animado.gif')} 
+                  source={require('../../Images/home.png')} 
                   style={{position: 'absolute'}}
             />
 
