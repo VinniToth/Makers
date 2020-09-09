@@ -82,7 +82,7 @@ export default function Pedido({ children }){
         <View style={styles.tela}> 
         
           {/* HEADER COMEÇO */}
-          <View style={{alignItems: 'center', position: 'absolute'}}>
+          <View style={{alignItems: 'center', position: 'absolute', flex: 1, width: '100%'}}>
                 <Image 
                     source={require('../../../Images/fundo.png')}
                     style={styles.header}

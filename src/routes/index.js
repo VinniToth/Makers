@@ -1,5 +1,5 @@
 import React, {useContext} from 'react';
-import { View, ActivityIndicator } from 'react-native';
+import { Image, View, ActivityIndicator } from 'react-native';
 import { AuthContext } from '../contexts/auth';
 
 import SignIn from '../../Navigate';
@@ -12,10 +12,13 @@ export default function Routes(){
     if(loading){
         return(
             <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-                <ActivityIndicator size="large" color="#131313"/>
+               <Image
+                  source={require('../Images//Animado.gif')} 
+                />
             </View>
         );
     }
+    else;
 
     return(
     signed ? <Tabsc/> : signedm ? <Tabs/> : <SignIn/> 
