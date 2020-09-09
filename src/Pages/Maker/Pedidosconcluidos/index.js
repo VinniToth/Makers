@@ -45,8 +45,11 @@ export default function Pedidosconcluidos(){
           let maker1 = childItem.val().maker1;
           let maker2 = childItem.val().maker2;
           let maker3 = childItem.val().maker3;
-
+          
+          if(maker1 == userm.uid || maker2== userm.uid || maker3== userm.uid)
+          {
             setPedidos(oldArray => [...oldArray, data].reverse());
+          }
 
         })
         setLoading(false);
