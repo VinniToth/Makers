@@ -217,7 +217,7 @@ export default function AuthProvider({ children }){
 
         function nextc(){
             Alert.alert(
-                `Dica: mantenha SEMPRE seu número de telefone e seus dados atualizados!`,
+                `Dica: mantenha SEMPRE seus dados atualizados!`,
                 `Os profissionais Makers entrarão em contato via WhatsApp, então antes de fazer um pedido confira se seus dados estão atualizados na aba "Perfil" ;)`,
                 [
                     {
