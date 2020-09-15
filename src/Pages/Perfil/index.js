@@ -117,17 +117,16 @@ const styles = StyleSheet.create({
     },
     vbtn:{
       flexDirection: 'row',
+      justifyContent: 'space-between',
       height: 40,
-      marginVertical: 50,
-      marginTop: 0,
-      marginHorizontal: 25
+      margin: 10
     },
     btn:{
       justifyContent:'center',
       alignItems: 'center',
       backgroundColor: '#8c52ff',
       height: 50,
-      marginHorizontal: 25,
+      marginHorizontal: 20,
       borderRadius: 12,
       elevation: 8
     },
