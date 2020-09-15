@@ -38,19 +38,14 @@ export default function Perfil(){
           Para começar seu cadastro, precisamos saber qual o seu perfíl...
         </Text>
 
-        <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
+        <View style={styles.vbtn}>
+
+        <View>
+
           <Image 
           source={require('../../Images/Avatar_Comp.png')}
           style={{marginHorizontal: 20}}
           />
-
-          <Image 
-          source={require('../../Images/Avatar_Maker.png')}
-          style={{marginHorizontal: 20}}
-          />
-        </View>
-
-        <View style={styles.vbtn}>
 
           <TouchableOpacity 
           onPress={nxtcomp}
@@ -61,8 +56,15 @@ export default function Perfil(){
               COMPRADOR
             </Text>
 
-          </TouchableOpacity>
 
+          </TouchableOpacity>
+            </View>
+
+          <View>
+          <Image 
+          source={require('../../Images/Avatar_Maker.png')}
+          style={{marginHorizontal: 20}}
+          />
           <TouchableOpacity 
           onPress={nxtmake}
           style={styles.btn} 
@@ -73,6 +75,8 @@ export default function Perfil(){
             </Text>
 
           </TouchableOpacity>
+
+          </View>
 
         </View>
 
@@ -118,7 +122,6 @@ const styles = StyleSheet.create({
       marginTop: 0
     },
     btn:{
-      flex:1,
       justifyContent:'center',
       alignItems: 'center',
       backgroundColor: '#8c52ff',
