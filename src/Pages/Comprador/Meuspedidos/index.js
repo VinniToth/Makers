@@ -66,9 +66,6 @@ export default function Pedido(){
           };
           setPedidos(oldArray => [...oldArray, data].reverse());
         })
-        if(pedidos == null){
-          setTriste(true);
-        }
         setLoading(false);
 
       })
@@ -104,15 +101,7 @@ export default function Pedido(){
           </View>
           {/* TITULO FIM */}
 
-          {triste ?
-          (<View style={{alignItems: 'center', marginTop: 30}}>
-          <Image source={require('../../../Images/estrela-triste.png')} style={{marginVertical: 20}} />
-          <Text style={{textAlign: 'center', marginHorizontal: 20, fontSize: 20, marginBottom: 15}}>Você ainda não encomendou nenhum pedido :(</Text>
-          <Text style={{textAlign: 'center', marginHorizontal: 20, fontSize: 20, fontWeight: 'bold'}}>Passe para o lado e peça já! Makers entrarão em contato via WhatsApp!</Text>
-          <Iconm name="call-received" size={45} color='black'/>
-          </View>)
-          :
-          (<View style={styles.vpedido}>
+         <View style={styles.vpedido}>
 
             {loading ?
             (
@@ -126,8 +115,7 @@ export default function Pedido(){
             />
             )
             }
-            </View>)
-            }
+            </View>
 
 
         </View>
