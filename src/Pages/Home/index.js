@@ -22,7 +22,7 @@ export default function Home() {
         
             <Image
                   source={require('../../Images/home.png')} 
-                  style={{position: 'absolute'}}
+                  style={{position: 'absolute', height: '100%', width: '100%'}}
             />
 
             <View style={{flex: 1, justifyContent: 'flex-end', alignItems: 'center', marginTop: 400}}>

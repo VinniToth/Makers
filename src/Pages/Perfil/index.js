@@ -40,12 +40,12 @@ export default function Perfil(){
 
         <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
           <Image 
-          source={require('../../Images/2.png')}
+          source={require('../../Images/Avatar_Comp.png')}
           style={{marginHorizontal: 20}}
           />
 
           <Image 
-          source={require('../../Images/1.png')}
+          source={require('../../Images/Avatar_Maker.png')}
           style={{marginHorizontal: 20}}
           />
         </View>
