@@ -119,14 +119,15 @@ const styles = StyleSheet.create({
       flexDirection: 'row',
       height: 40,
       marginVertical: 50,
-      marginTop: 0
+      marginTop: 0,
+      marginHorizontal: 25
     },
     btn:{
       justifyContent:'center',
       alignItems: 'center',
       backgroundColor: '#8c52ff',
       height: 50,
-      marginHorizontal: 15,
+      marginHorizontal: 25,
       borderRadius: 12,
       elevation: 8
     },
