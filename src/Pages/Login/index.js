@@ -34,7 +34,7 @@ export default function Login() {
 
                   <Image 
                   source={require('../../Images/fundo.png')}
-                  style={{position: 'absolute'}}
+                  style={{position: 'absolute', height: '100%', width: '100%', resizeMode: 'cover'}}
                   />
 
                   <View style={{alignItems: 'center'}}>

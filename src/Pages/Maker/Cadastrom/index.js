@@ -178,7 +178,8 @@ export default function Cadastrom(){
         {/* TELA COMEÇO */}  
         <View style={styles.tela}> 
         
-          <Image source={require('../../../Images/fundo.png')} style={{position: 'absolute'}} />
+          <Image source={require('../../../Images/fundo.png')} 
+          style={{position: 'absolute', height: '100%', width: '100%', resizeMode: 'cover'}}/>
 
           <View style={{alignItems: 'center'}}>
               <Iconm name="star" size={125} color='#FFB600' style={{position: 'absolute', marginTop: 0}} /> 

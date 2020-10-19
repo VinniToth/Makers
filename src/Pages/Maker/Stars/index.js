@@ -140,7 +140,7 @@ export default function Stars(){
             <View style={{alignItems: 'center', position: 'absolute', flex: 1, width: '100%'}}>
                 <Image 
                     source={require('../../../Images/fundo.png')}
-                    style={styles.header}
+                    style={{position: 'absolute', height: '100%', width: '100%', resizeMode: 'cover'}}
                 />
                 <Iconm name="star" size={125} color='#FFB600' style={{position: 'absolute', marginTop: 0, alignItems: 'center'}} /> 
             </View>

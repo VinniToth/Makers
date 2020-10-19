@@ -180,8 +180,8 @@ export default function Listapedido({ data }){
           >
               <Image 
             source={require('../../../Images/fundo.png')}
-            style={styles.header}
-            />            
+            style={{position: 'absolute', height: '100%', width: '100%', resizeMode: 'cover'}}
+                />        
             <View style={styles.vmodal}>
 
               <View style={{alignItems: 'center', flexDirection: 'row',

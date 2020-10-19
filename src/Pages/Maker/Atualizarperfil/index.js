@@ -354,8 +354,8 @@ export default function Atualizarperfil(){
       <View style={styles.tela}> 
             <Image 
                 source={require('../../../Images/fundo.png')}
-                style={styles.header}
-            />
+                style={{position: 'absolute', height: '100%', width: '100%', resizeMode: 'cover'}}
+                />
 
         <ScrollView showsVerticalScrollIndicator={false}>
         <View style={styles.vtitulo}>

@@ -28,8 +28,9 @@ export default function Perfil(){
 
             <Image 
                 source={require('../../Images/fundo.png')}
-                style={{position: 'absolute'}}
+                style={{position: 'absolute', height: '100%', width: '100%', resizeMode: 'cover'}}
                 />
+                
         <View style={{alignItems: 'center'}}>
         <Iconm name="star" size={125} color='#FFB600' style={{position: 'absolute', marginTop: 0}} /> 
         </View>
