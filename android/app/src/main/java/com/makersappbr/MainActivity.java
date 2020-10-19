@@ -1,4 +1,4 @@
-package com.makers;
+package com.makersappbr;
 
 import com.facebook.react.ReactActivity;
 

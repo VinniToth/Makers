@@ -35,46 +35,46 @@ export default function Perfil(){
         </View>
 
         <Text style={styles.textoprincipal}>
-          Para começar seu cadastro, precisamos saber qual o seu perfíl...
+          Para começar seu cadastro, precisamos saber qual é o seu perfíl...
         </Text>
 
         <View style={styles.vbtn}>
 
-        <View>
+          <View>
 
-          <Image 
-          source={require('../../Images/Avatar_Comp.png')}
-          style={{marginHorizontal: 20}}
-          />
+            <Image 
+            source={require('../../Images/Avatar_Comp.png')}
+            style={{marginHorizontal: 20}}
+            />
 
-          <TouchableOpacity 
-          onPress={nxtcomp}
-          style={styles.btn} 
-          >
+            <TouchableOpacity 
+            onPress={nxtcomp}
+            style={styles.btn} 
+            >
 
             <Text style={styles.txtbtn}>
               COMPRADOR
             </Text>
 
 
-          </TouchableOpacity>
-            </View>
+            </TouchableOpacity>
+          </View>
 
           <View>
-          <Image 
-          source={require('../../Images/Avatar_Maker.png')}
-          style={{marginHorizontal: 20}}
-          />
-          <TouchableOpacity 
-          onPress={nxtmake}
-          style={styles.btn} 
-          >
+            <Image 
+            source={require('../../Images/Avatar_Maker.png')}
+            style={{marginHorizontal: 20}}
+            />
+            <TouchableOpacity 
+            onPress={nxtmake}
+            style={styles.btn} 
+            >
 
             <Text style={styles.txtbtn}>
               MAKER
             </Text>
 
-          </TouchableOpacity>
+            </TouchableOpacity>
 
           </View>
 
@@ -109,24 +109,23 @@ const styles = StyleSheet.create({
       alignItems: 'center' 
     },
     textoprincipal:{
-      fontSize: 23,
+      fontSize: 21,
       textAlign: 'center',
       fontFamily: "Roboto-Light", 
       margin: 10,
       marginTop: 140,
     },
     vbtn:{
+      flex: 1,
       flexDirection: 'row',
       justifyContent: 'space-between',
-      height: 40,
-      margin: 10
     },
     btn:{
       justifyContent:'center',
       alignItems: 'center',
       backgroundColor: '#8c52ff',
       height: 50,
-      marginHorizontal: 20,
+      marginHorizontal: 25,
       borderRadius: 12,
       elevation: 8
     },

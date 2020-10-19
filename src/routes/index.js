@@ -13,7 +13,7 @@ export default function Routes(){
         return(
             <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
                <Image
-                  source={require('../Images//Animado.gif')} 
+                  source={require('../Images//mak.png')} 
                 />
             </View>
         );
