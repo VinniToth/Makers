@@ -45,6 +45,9 @@ export default function Picker({ onChance }){
                 {label: 'Festa na Caixa', value: 'Festa na Caixa', color: '#222'},
                 {label: 'Kit Festa', value: 'Kit Festa', color: '#222'},
                 {label: 'Decorações', value: 'Decorações', color: '#222'},
+                {label: 'DJ', value: 'DJ', color: '#222'},
+                {label: 'Brinquedos infantis', value: 'Brinquedos infantis', color: '#222'},
+                {label: 'Casamentos', value: 'Casamentos', color: '#222'},
                 {label: 'Outro', value: 'Outro', color: '#222'},
             ]}
             />
