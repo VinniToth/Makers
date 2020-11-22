@@ -70,11 +70,12 @@ export default function Pedidosconcluidos(){
         <View style={styles.tela}> 
         
           {/* HEADER COMEÇO */}
-          <View style={{alignItems: 'center', position: 'absolute', flex: 1, width: '100%'}}>
                 <Image 
                     source={require('../../../Images/fundo.png')}
                     style={{position: 'absolute', height: '100%', width: '100%', resizeMode: 'cover'}}
                     />
+                    
+            <View style={{alignItems: 'center', position: 'absolute', flex: 1, width: '100%'}}>
                 <Iconm name="star" size={125} color='#FFB600' style={{position: 'absolute', marginTop: 0, alignItems: 'center'}} /> 
             </View>
                 <Text style={styles.stars}>{ stars }</Text>

@@ -137,11 +137,12 @@ export default function Stars(){
         {/* TELA COMEÇO */}  
         <View style={styles.tela}> 
         
-            <View style={{alignItems: 'center', position: 'absolute', flex: 1, width: '100%'}}>
                 <Image 
                     source={require('../../../Images/fundo.png')}
                     style={{position: 'absolute', height: '100%', width: '100%', resizeMode: 'cover'}}
                 />
+                
+            <View style={{alignItems: 'center', position: 'absolute', flex: 1, width: '100%'}}>
                 <Iconm name="star" size={125} color='#FFB600' style={{position: 'absolute', marginTop: 0, alignItems: 'center'}} /> 
             </View>
                 <Text style={styles.stars}>{stars}</Text>
@@ -212,7 +213,7 @@ export default function Stars(){
         onRequestClose={() => setshowModal1(false)}
         >
           
-          <WebView source={{uri : "https://cacaulovers.com.br/mp"}} onNavigationStateChange={data => handleResponse1(data)} />
+          <WebView source={{uri : "https://cacaulovers.com.br/mp/mp1.php"}} onNavigationStateChange={data => handleResponse1(data)} />
 
         </Modal>
         
@@ -221,7 +222,7 @@ export default function Stars(){
         onRequestClose={() => setshowModal2(false)}
         >
           
-          <WebView source={{uri : "https://cacaulovers.com.br/mp/teste.php"}} onNavigationStateChange={data => handleResponse2(data)} />
+          <WebView source={{uri : "https://cacaulovers.com.br/mp/mp2.php"}} onNavigationStateChange={data => handleResponse2(data)} />
 
         </Modal>
 
@@ -230,7 +231,7 @@ export default function Stars(){
         onRequestClose={() => setshowModal3(false)}
         >
           
-          <WebView source={{uri : "https://cacaulovers.com.br/mp/vinni.php"}} onNavigationStateChange={data => handleResponse3(data)} />
+          <WebView source={{uri : "https://cacaulovers.com.br/mp/mp3.php"}} onNavigationStateChange={data => handleResponse3(data)} />
 
         </Modal>
 
@@ -239,7 +240,7 @@ export default function Stars(){
         onRequestClose={() => setshowModal4(false)}
         >
           
-          <WebView source={{uri : "https://cacaulovers.com.br/mp/coiso.php"}} onNavigationStateChange={data => handleResponse4(data)} />
+          <WebView source={{uri : "https://cacaulovers.com.br/mp/mp4.php"}} onNavigationStateChange={data => handleResponse4(data)} />
 
         </Modal>
 
