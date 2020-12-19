@@ -361,7 +361,12 @@ export default function Atualizarperfil(){
         <View style={styles.vtitulo}>
 
         <TouchableOpacity
-        onPress={ () => ImagePicker.showImagePicker({},  imagePickerCallback)}>
+        onPress={ () => ImagePicker.showImagePicker({
+          title: 'Selecione uma imagem de perfil',
+          cancelButtonTitle: 'Cancelar',
+          takePhotoButtonTitle: 'Usar camera',        
+          chooseFromLibraryButtonTitle: 'Escolher na galeria',
+        },  imagePickerCallback)}>
           <View style={styles.vfoto}>
             {avatar || caminhoavatar ?
             (
@@ -440,7 +445,12 @@ export default function Atualizarperfil(){
           <View style={{flexDirection: 'row', justifyContent: 'space-around', alignItems: 'center'}}>
             
             <TouchableOpacity 
-            onPress={ () => ImagePicker.showImagePicker({},  imagePickerCallback2)}
+            onPress={ () => ImagePicker.showImagePicker({
+              title: 'Selecione uma imagem de trabalhos que você ja realizou',
+              cancelButtonTitle: 'Cancelar',
+              takePhotoButtonTitle: 'Usar camera',        
+              chooseFromLibraryButtonTitle: 'Escolher na galeria',
+            },  imagePickerCallback2)}
             style={{flex: 1}}>
               {image1 || caminhoimg1 ?
               (
@@ -459,7 +469,12 @@ export default function Atualizarperfil(){
             </TouchableOpacity>
 
             <TouchableOpacity 
-            onPress={ () => ImagePicker.showImagePicker({},  imagePickerCallback3)}
+            onPress={ () => ImagePicker.showImagePicker({
+              title: 'Selecione uma imagem de trabalhos que você ja realizou',
+              cancelButtonTitle: 'Cancelar',
+              takePhotoButtonTitle: 'Usar camera',        
+              chooseFromLibraryButtonTitle: 'Escolher na galeria',
+            },  imagePickerCallback3)}
             style={{flex: 1}}>
             {image2 || caminhoimg2 ?
               (
@@ -478,7 +493,12 @@ export default function Atualizarperfil(){
           </TouchableOpacity>
 
             <TouchableOpacity 
-            onPress={ () => ImagePicker.showImagePicker({},  imagePickerCallback4)}
+            onPress={ () => ImagePicker.showImagePicker({
+              title: 'Selecione uma imagem de trabalhos que você ja realizou',
+              cancelButtonTitle: 'Cancelar',
+              takePhotoButtonTitle: 'Usar camera',        
+              chooseFromLibraryButtonTitle: 'Escolher na galeria',
+            },  imagePickerCallback4)}
             style={{flex: 1}}>
             {image3 || caminhoimg3 ?
             (
