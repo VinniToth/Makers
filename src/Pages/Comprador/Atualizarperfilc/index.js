@@ -217,7 +217,12 @@ export default function Atualizarperfilc(){
           <View style={styles.vtitulo}>
 
             <TouchableOpacity
-            onPress={ () => ImagePicker.showImagePicker({},  imagePickerCallback)}>
+            onPress={ () => ImagePicker.showImagePicker({
+              title: 'Selecione uma foto de perfil',
+              cancelButtonTitle: 'Cancelar',
+              takePhotoButtonTitle: 'Usar camera',        
+              chooseFromLibraryButtonTitle: 'Escolher na galeria',
+            },  imagePickerCallback)}>
               <View style={styles.vfoto}>
                 {avatar || caminhoavatar ?
                 (
