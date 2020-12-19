@@ -214,7 +214,12 @@ export default function Novopedido(){
 
                         <TouchableOpacity 
                         style={{marginTop: 5, padding: 6, backgroundColor: '#8c52ff', elevation: 4, borderRadius: 8}}
-                        onPress={ () => ImagePicker.showImagePicker({},  imagePickerCallback)}
+                        onPress={ () => ImagePicker.showImagePicker({
+                          title: 'Selecione uma imagem de exemplo do pedido',
+                          cancelButtonTitle: 'Cancelar',
+                          takePhotoButtonTitle: 'Usar camera',        
+                          chooseFromLibraryButtonTitle: 'Escolher na galeria',
+                        },  imagePickerCallback)}
                         >
                           <Text style={{fontSize: 17, fontFamily: "Roboto-Tiny", color: 'white'}}>Inserir imagem de exemplo</Text>
                         </TouchableOpacity>
